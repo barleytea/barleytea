@@ -7,7 +7,7 @@
 📝 I regulary write articles on [https://barlog.tech](https://barlog.tech)  
 📫 How to reach me **barleytea362@gmail.com**  
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barleytea&layout=compact&locale=en&theme=dracula" width="500px;" alt="barleytea" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barleytea&layout=compact&locale=en&theme=dracula&hide=html" width="500px;" alt="barleytea" /></p>
 
 <!-- BLOG-POST-LIST:START -->
 - [プロジェクトごとに使用する Rust のバージョンを指定するメモ](https://barlog.tech/894a9eee24b54699ab919f7b83340a17)
