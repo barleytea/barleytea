@@ -1,4 +1,4 @@
-<h1 align="center">SHOTA, Miyoshi</h1>
+<h1 align="left">SHOTA, Miyoshi</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=barleytea&label=Profile%20views&color=0e75b6&style=flat" alt="barleytea" /> </p>
 
 <p align="left"> <a href="https://twitter.com/barlog_tech" target="blank"><img src="https://img.shields.io/twitter/follow/barlog_tech?logo=twitter&style=for-the-badge" alt="barlog_tech" /></a> </p>
@@ -8,6 +8,9 @@
 📫 How to reach me **barleytea362@gmail.com**  
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barleytea&layout=compact&locale=en&theme=dracula&hide=html" width="500px;" alt="barleytea" /></p>
+
+<h1 align="left">Posts</h1>
+<br>
 
 <!-- BLOG-POST-LIST:START -->
 - [プロジェクトごとに使用する Rust のバージョンを指定するメモ](https://barlog.tech/894a9eee24b54699ab919f7b83340a17)
