@@ -15,7 +15,7 @@
 <!-- BLOG-POST-LIST:START -->
 - [プロジェクトごとに使用する Rust のバージョンを指定するメモ](https://barlog.tech/894a9eee24b54699ab919f7b83340a17)
 - [MacBook Pro &lpar;14-inch, 2021&rpar; M1 Max 初期設定メモ](https://barlog.tech/33886a823e244522b427317de0952a9e)
-- [Kyash を解約した話](https://barlog.tech/da217580089c4595a57361d68f0ff427)
+- [【WIP】Kyash を解約した話](https://barlog.tech/da217580089c4595a57361d68f0ff427)
 - [Spring Boot の RestTemplate で application/x-www-form-urlencoded な request を送信する](https://barlog.tech/ce04019ec3b644458cd6ca14a27d0281)
 - [Java8 で Exponential Backoff な retry を実装してみる](https://barlog.tech/fe9cae9c370e4c90abd7a08129d4d0d7)
 - [Spring Boot の RestTemplate で 500 系エラーが発生した場合でも reponse header / body の中身を取得する](https://barlog.tech/45f3be86eb8a45358124ecfb634ab9a5)
