@@ -20,8 +20,6 @@
 - [Java8 で Exponential Backoff な retry を実装してみる](https://barlog.tech/fe9cae9c370e4c90abd7a08129d4d0d7)
 - [Spring Boot の RestTemplate で 500 系エラーが発生した場合でも reponse header / body の中身を取得する](https://barlog.tech/45f3be86eb8a45358124ecfb634ab9a5)
 - [Blog Posts](https://barlog.tech/542247f2d60d45aaa2efbf7713828861)
-- [Barley Tea Tech Blog](https://barlog.tech/5a6e2fdeb4314ce4a242b80dd87989e0)
-- [Barley Tea Tech Blog](https://barlog.tech/)
 - [三好 翔太 | Shota Miyoshi](https://barlog.tech/b94fcc165b1246a2b8ec754c36b07f65)
 - [Curriculum Vitae](https://barlog.tech/103f2ee6962c471e80ee27ff3004c8c0)
 <!-- BLOG-POST-LIST:END -->
