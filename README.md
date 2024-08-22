@@ -3,4 +3,7 @@
 
 contact: [https://barlog.tech](https://barlog.tech)  
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barleytea&layout=compact&locale=en&theme=dracula&hide=html" width="500px;" alt="barleytea" /></p>
+## Curriculum Vitae
+
+* [GitHub Pages](https://barlog.tech/barleytea/)
+* [PDF](https://github.com/barleytea/barleytea/releases)
