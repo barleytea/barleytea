@@ -46,6 +46,7 @@
       "max": 150
     },
     "terminology": true,
-    "use-si-units": true
+    "use-si-units": true,
+    "spellcheck-tech-word": true
   }
 }
