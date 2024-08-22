@@ -1,32 +1,43 @@
 name: Release PDF
 
 on:
-  pull_request:
-    branches: [main]
-    paths: 'docs/README.md'
-  workflow_dispatch:
+  push:
+    tags:
+    - 'v*'
 
 jobs:
-  release:
-    name: Release PDF
+  build:
+    name: build pdf and upload release
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: npm
-      - run: npm install
-      - run: npm run build:pdf
-      - name: Create a draft release
-        uses: softprops/action-gh-release@v1
+          node-version-file: 'package.json'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: build pdf
+        run: npm run build:pdf
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          body: ${{ github.event.pull_request.title }}
-          draft: true
-          fail_on_unmatched_files: true
-          files: docs/README.pdf
-          name: Release ${{ github.ref }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path:  docs/README.pdf
+          asset_name: README.pdf
+          asset_content_type: application/pdf
