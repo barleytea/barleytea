@@ -10,7 +10,7 @@
 
 ### ✨ My Skills
 
-[![My Skills](https://skillicons.dev/icons?i=java,spring,go,ts,js,nodejs,angular,gatsbyjs,html,css,tailwind,gcp,kubernetes,mongodb,firebase,git,github,githubactions&theme=light&perline=8)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,go,ts,js,nodejs,angular,gatsbyjs,html,css,tailwind,gcp,kubernetes,mongodb,firebase,git,github,githubactions&theme=light&perline=6)](https://skillicons.dev)
 
 
 
