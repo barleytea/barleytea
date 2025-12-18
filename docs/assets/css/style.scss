@@ -1,0 +1,306 @@
+---
+---
+
+// Import theme defaults
+@import "{{ site.theme }}";
+
+// =============================================================================
+// Color Variables (Requirements 3.1)
+// =============================================================================
+$primary-color: #2c3e50;      // ダークブルー（見出し）
+$secondary-color: #3498db;    // ブルー（アクセント）
+$text-color: #333333;         // 本文テキスト
+$muted-color: #666666;        // 補助テキスト
+$border-color: #e1e4e8;       // ボーダー
+$background-light: #f8f9fa;   // 背景（薄いグレー）
+$background-white: #ffffff;   // 背景（白）
+$link-color: #2980b9;         // リンク色
+$link-hover-color: #1a5276;   // リンクホバー色
+
+// =============================================================================
+// Typography Variables (Requirements 2.1)
+// =============================================================================
+$font-family-base: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+$font-family-mono: 'Source Code Pro', 'Consolas', 'Monaco', monospace;
+$font-size-base: 14px;
+$line-height-base: 1.7;
+
+// Font size hierarchy
+$font-size-h1: 2rem;
+$font-size-h2: 1.6rem;
+$font-size-h3: 1.3rem;
+$font-size-h4: 1.1rem;
+
+// =============================================================================
+// Spacing Variables (Requirements 4.1)
+// =============================================================================
+$section-margin: 2.5rem;
+$card-padding: 1.5rem;
+$border-radius: 8px;
+
+
+// =============================================================================
+// Typography Styles (Requirements 2.1, 2.2, 2.3)
+// =============================================================================
+
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;500&display=swap');
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+}
+
+// Heading hierarchy
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 700;
+  color: $primary-color;
+  margin-top: $section-margin;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-weight: 700;
+  color: $primary-color;
+  margin-top: $section-margin;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid $border-color;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-weight: 500;
+  color: $primary-color;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-weight: 500;
+  color: $muted-color;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+// Monospace font for code elements (Requirements 2.3)
+code, pre, kbd, samp {
+  font-family: $font-family-mono;
+}
+
+pre {
+  background-color: $background-light;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+
+// =============================================================================
+// Color Scheme Styles (Requirements 3.1, 3.2, 3.3)
+// =============================================================================
+
+// Link styles with visual distinction
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  
+  &:visited {
+    color: darken($link-color, 10%);
+  }
+}
+
+// Accent color for important elements
+strong {
+  color: $primary-color;
+  font-weight: 500;
+}
+
+// Blockquote styling with accent
+blockquote {
+  border-left: 4px solid $secondary-color;
+  background-color: $background-light;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  color: $muted-color;
+  border-radius: 0 $border-radius $border-radius 0;
+  
+  p {
+    margin: 0;
+  }
+}
+
+
+// =============================================================================
+// Layout and Section Styles (Requirements 4.1)
+// =============================================================================
+
+// Section spacing
+section, .section {
+  margin-bottom: $section-margin;
+}
+
+// Horizontal rule styling
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    $border-color 20%,
+    $border-color 80%,
+    transparent
+  );
+  margin: $section-margin 0;
+}
+
+// Main content wrapper
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// List styling
+ul, ol {
+  padding-left: 1.5rem;
+  
+  li {
+    margin-bottom: 0.5rem;
+    line-height: $line-height-base;
+  }
+}
+
+// Nested list styling
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+// =============================================================================
+// Table Styles (Requirements 4.2)
+// =============================================================================
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: $background-white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: $primary-color;
+  color: $background-white;
+  
+  th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 500;
+    border: none;
+  }
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid $border-color;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    &:hover {
+      background-color: $background-light;
+    }
+  }
+  
+  td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+  }
+}
+
+// Compact table variant for basic info
+table:first-of-type {
+  th, td {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+// =============================================================================
+// Badge Styles for Technology Tags (Requirements 4.3)
+// =============================================================================
+
+// Inline code as badges
+code:not(pre code) {
+  background-color: $background-light;
+  color: $secondary-color;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid $border-color;
+  white-space: nowrap;
+}
+
+// Technology stack badges in tables
+td code {
+  background-color: lighten($secondary-color, 40%);
+  color: darken($secondary-color, 15%);
+  border-color: lighten($secondary-color, 30%);
+  margin-right: 0.25rem;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// =============================================================================
+// Responsive Design
+// =============================================================================
+
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  table {
+    font-size: 0.9em;
+    
+    th, td {
+      padding: 0.5rem;
+    }
+  }
+  
+  .wrapper {
+    padding: 1rem;
+  }
+}
