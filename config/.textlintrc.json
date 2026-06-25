@@ -26,7 +26,7 @@
     "max-comma": false,
     "max-kanji-continuous-len": {
       "max": 6,
-      "allow": ["職務経歴詳細", "業者管理機能", "地域連携機能"]
+      "allow": ["職務経歴詳細", "業者管理機能", "地域連携機能", "基本情報技術者試験", "応用情報技術者試験"]
     },
     "max-ten": true,
     "no-double-negative-ja": true,
