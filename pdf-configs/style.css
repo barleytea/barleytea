@@ -1,285 +1,141 @@
-/* =============================================================================
-   PDF Stylesheet for Resume
-   Consistent with Web version (docs/assets/css/style.scss)
-   Requirements: 5.1, 5.3
-   ============================================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
 
-/* Google Fonts - Noto Sans JP for Japanese support */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;500&display=swap');
-
-/* =============================================================================
-   Color Variables (matching Web version)
-   ============================================================================= */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --text-color: #333333;
-  --muted-color: #666666;
-  --border-color: #e1e4e8;
-  --background-light: #f8f9fa;
-  --background-white: #ffffff;
-  --link-color: #2980b9;
+  --ink: #1f2937;
+  --muted: #5b6573;
+  --line: #d9dee7;
+  --accent: #245b82;
 }
 
-/* =============================================================================
-   Base Typography (Requirements 5.1, 5.3)
-   ============================================================================= */
+@page {
+  size: A4;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
 body {
-  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-  font-size: 11px;
-  line-height: 1.7;
-  color: var(--text-color);
+  color: var(--ink);
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 10pt;
+  line-height: 1.55;
 }
 
-/* =============================================================================
-   Heading Styles
-   ============================================================================= */
+.web-nav,
+.web-detail {
+  display: none !important;
+}
+
+.pdf-page-start {
+  page-break-before: always;
+  break-before: page;
+}
+
 h1 {
-  font-size: 1.8rem;
+  margin: 0 0 0.15rem;
+  color: var(--ink);
+  font-size: 24pt;
   font-weight: 700;
-  color: var(--primary-color);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-align: center;
-  padding-top: 0;
+  line-height: 1.25;
+  text-align: left;
 }
 
-h1:first-child {
-  margin-top: 0;
-  padding-top: 0;
+h1 + p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 11pt;
 }
 
 h2 {
-  font-size: 1.4rem;
+  margin: 1.3rem 0 0.45rem;
+  padding: 0 0 0.2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 14pt;
   font-weight: 700;
-  color: var(--primary-color);
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--border-color);
-}
-
-h3 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-top: 1.5rem;
-  margin-bottom: 0.6rem;
-}
-
-h4 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--muted-color);
-  margin-top: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-
-/* =============================================================================
-   Code and Monospace Elements
-   ============================================================================= */
-code, pre, kbd, samp {
-  font-family: 'Source Code Pro', 'Consolas', 'Monaco', monospace;
-}
-
-pre {
-  background-color: var(--background-light);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.8rem;
-  overflow-x: auto;
-  font-size: 10px;
-}
-
-/* Inline code as badges */
-code:not(pre code) {
-  background-color: var(--background-light);
-  color: var(--secondary-color);
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  font-size: 0.85em;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
-  white-space: nowrap;
-}
-
-/* Technology stack badges in tables */
-td code {
-  background-color: #d6eaf8;
-  color: #1a5276;
-  border-color: #aed6f1;
-  margin-right: 0.2rem;
-}
-
-/* =============================================================================
-   Link Styles
-   ============================================================================= */
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =============================================================================
-   Strong and Emphasis
-   ============================================================================= */
-strong {
-  color: var(--primary-color);
-  font-weight: 500;
-}
-
-/* =============================================================================
-   Blockquote Styling
-   ============================================================================= */
-blockquote {
-  border-left: 4px solid var(--secondary-color);
-  background-color: var(--background-light);
-  padding: 0.8rem 1.2rem;
-  margin: 1rem 0;
-  color: var(--muted-color);
-  border-radius: 0 6px 6px 0;
-}
-
-blockquote p {
-  margin: 0;
-}
-
-/* =============================================================================
-   Horizontal Rule
-   ============================================================================= */
-hr {
-  border: none;
-  height: 1px;
-  background-color: var(--border-color);
-  margin: 2rem 0;
-}
-
-/* =============================================================================
-   List Styles
-   ============================================================================= */
-ul, ol {
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.4rem;
-  line-height: 1.7;
-}
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-}
-
-/* =============================================================================
-   Table Styles
-   ============================================================================= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 10px;
-  background-color: var(--background-white);
-}
-
-thead {
-  background-color: var(--primary-color);
-  color: var(--background-white);
-}
-
-thead th {
-  padding: 0.6rem 0.8rem;
-  text-align: left;
-  font-weight: 500;
-  border: none;
-}
-
-tbody tr {
-  border-bottom: 1px solid var(--border-color);
-}
-
-tbody tr:last-child {
-  border-bottom: none;
-}
-
-tbody td {
-  padding: 0.6rem 0.8rem;
-  vertical-align: top;
-  border: none;
-}
-
-/* Alternating row colors for readability */
-tbody tr:nth-child(even) {
-  background-color: var(--background-light);
-}
-
-
-/* =============================================================================
-   Page Break Rules (Requirements 5.2)
-   Prevent awkward section splits in PDF output
-   ============================================================================= */
-
-/* Avoid page breaks immediately after headings */
-h1, h2, h3, h4 {
   page-break-after: avoid;
   break-after: avoid;
 }
 
-/* Avoid page breaks inside important elements */
-table, blockquote, pre, figure {
-  page-break-inside: avoid;
-  break-inside: avoid;
+h3 {
+  margin: 0.9rem 0 0.25rem;
+  color: var(--ink);
+  font-size: 11pt;
+  font-weight: 700;
+  page-break-after: avoid;
+  break-after: avoid;
 }
 
-/* Allow page breaks before major sections (h2) */
-h2 {
-  page-break-before: auto;
-  break-before: auto;
+h4 {
+  margin: 0.7rem 0 0.2rem;
+  color: var(--accent);
+  font-size: 10pt;
+  font-weight: 700;
+  page-break-after: avoid;
+  break-after: avoid;
 }
 
-/* Keep list items together when possible */
-li {
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-
-/* Keep table rows together */
-tr {
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-
-/* Ensure paragraphs following headings stay with the heading */
-h1 + p, h2 + p, h3 + p, h4 + p {
-  page-break-before: avoid;
-  break-before: avoid;
-}
-
-/* Keep at least 2 lines before a page break (orphans) */
 p {
+  margin: 0.3rem 0 0.55rem;
   orphans: 2;
   widows: 2;
 }
 
-/* =============================================================================
-   Print-specific Adjustments
-   ============================================================================= */
+ul {
+  margin: 0.25rem 0 0.7rem;
+  padding-left: 1.1rem;
+}
+
+li {
+  margin: 0.12rem 0;
+  padding-left: 0.05rem;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 9pt;
+  overflow-wrap: anywhere;
+}
+
+.resume-meta {
+  margin: 0.35rem 0 0.8rem;
+}
+
+.resume-meta > div {
+  display: flex;
+  gap: 0.8rem;
+  margin: 0.12rem 0;
+}
+
+.resume-meta dt {
+  min-width: 4.5rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.resume-meta dd {
+  margin: 0;
+}
+
 @media print {
-  body {
-    font-size: 11px;
-  }
-  
-  /* Ensure links are visible in print */
-  a {
-    color: var(--link-color);
-  }
-  
-  /* Remove hover effects for print */
-  tbody tr:hover {
-    background-color: inherit;
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+    break-after: avoid;
   }
 }
